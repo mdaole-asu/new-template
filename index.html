@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--[if !mso]><!-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!--<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title></title>
+	
+	<style>
+[style*="Roboto"] {font-family: 'Roboto', Arial, sans-serif !important }
+v\:* { behavior: url(#default#VML); display:inline-block}
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,700,400italic,500,500italic,700italic,900,900italic);
+#MessageViewBody .foo { display: none !important; }
+#outlook a {padding: 0;}
+a[x-apple-data-detectors] {color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;}
+td.header {padding-top: 3px !important; padding-bottom: 3px !important;padding-right: 0px !important; padding-left: 0px !important; color: #FFC627; font-size: 42px; font-weight: 400; letter-spacing: -1px !important; max-width: 100% !important;}
+td.headline {padding-top: 5px !important; padding-bottom: 15px !important; color: #FFC627; font-size: 32px; line-height: 44px; font-weight: 300;}
+  /* Basics */
+body {
+	margin: 0 !important;
+	padding: 0;
+	background-color: #f1f1f1;
+}
+table {
+	border-spacing: 0;
+	font-family: 'Roboto', Arial, sans-serif !important;
+	color: #333333;
+}
+td {
+	padding: 0;
+}
+img {
+	border: 0;
+}
+div[style*="margin: 16px 0"] { 
+	margin:0 !important;
+}
+.wrapper {
+	width: 100%;
+	table-layout: fixed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+.webkit {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.outer {
+	Margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+}
+.inner {
+	padding: 10px;
+}
+.contents {
+	width: 100%;
+}
+p {
+	Margin: 0;
+}
+a {
+	color: #ee6a56;
+	text-decoration: underline;
+}
+.h1 {
+	font-size: 21px;
+	font-weight: bold;
+	Margin-bottom: 18px;
+}
+.h2 {
+	font-size: 18px;
+	font-weight: bold;
+	Margin-bottom: 12px;
+}
+.full-width-image img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+/* One column layout */
+.one-column .contents {
+	text-align: left;
+}
+.one-column p {
+	font-size: 14px;
+	Margin-bottom: 10px;
+}
+
+/*Two column layout*/
+.two-column, .two-column-sns {
+	text-align: center;
+	font-size: 0;
+}
+.two-column .column {
+	width: 100%;
+	max-width: 280px;
+	display: inline-block;
+	vertical-align: top;
+}
+    
+.two-column-sns .column {
+	width: 280px;
+	display: inline-block;
+	vertical-align: top;
+}
+.two-column .contents, .two-column-sns .contents {
+	text-align: left;
+}
+.two-column img {
+	width: 100%;
+	max-width: 280px;
+	height: auto;
+}
+    
+.two-column-sns img {
+  max-width: 280px;
+  height: auto;
+}
+.two-column .text, .two-column-sns .text {
+	padding-top: 10px;
+}
+
+/*Three column layout*/
+.three-column {
+	text-align: center;
+	font-size: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.three-column .column {
+	width: 100%;
+	max-width: 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+.three-column img {
+	width: 100%;
+	max-width: 180px;
+	height: auto;
+}
+.three-column .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.three-column .text {
+	padding-top: 10px;
+}
+
+/* Left sidebar layout */
+.left-sidebar {
+	text-align: center;
+	font-size: 0;
+}
+.left-sidebar .column {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.left-sidebar .left {
+	max-width: 100px;
+}
+.left-sidebar .right {
+	max-width: 500px;
+}
+.left-sidebar .img {
+	width: 100%;
+	max-width: 80px;
+	height: auto;
+}
+.left-sidebar .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.left-sidebar a {
+	color: #85ab70;
+}
+
+/* Right sidebar layout */
+.right-sidebar {
+	text-align: center;
+	font-size: 0;
+}
+.right-sidebar .column {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.right-sidebar .left {
+	max-width: 100px;
+}
+.right-sidebar .right {
+	max-width: 500px;
+}
+.right-sidebar .img {
+	width: 100%;
+	max-width: 80px;
+	height: auto;
+}
+.right-sidebar .contents {
+	font-size: 14px;
+	text-align: center;
+}
+.right-sidebar a {
+	color: #70bbd9;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 480px) {
+	.two-column .column, .two-column-sns .column,
+	.three-column .column {
+		max-width: 100% !important;
+	}
+	.two-column img, .two-column-sns img {
+		max-width: 100% !important;
+	}
+	.three-column img {
+		max-width: 50% !important;
+	}
+  *[class="100p"] {width:100% !important; height:auto !important;} 
+  .header {padding-top: 0px !important; padding-bottom: 0px !important; padding-right: 0px !important; padding-left: 0px !important; font-size: 28px !important; letter-spacing: -1px !important; line-height: 30px !important;}
+}
+
+  
+  </style>
+	
+	<!--[if (gte mso 9)|(IE)]>
+	<style type="text/css">
+		table {border-collapse: collapse;}
+	</style>
+	<![endif]-->
+</head>
+<body>
+	<center class="wrapper">
+		<div class="webkit">
+			<!--[if (gte mso 9)|(IE)]>
+			<table width="600" align="center">
+			<tr>
+			<td>
+			<![endif]-->
+			<table class="outer" align="center">
+			
+			<tr>
+					<td class="one-column">
+						<table width="100%">
+							<tr>
+								<td nowrap="nowrap" style="text-align: right; border-collapse: separate; font-size: 10px; color:#8C1D40; font-family: Arial, 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; padding: 8px 0px 0px 8px; line-height: 10px; letter-spacing: 0px;"><a name="View_Online" title="View Online" href="%%view_email_url%%" target="_blank" style="color:#8C1D40;"><span style="color:#8C1D40; transform: none;"><strong>View Online</strong></span></a>
+                </td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+					<tr>
+					<td class="one-column">
+						<table width="100%">
+							<tr>
+								<td align="center" valign="top">           
+                <table border="0" cellpadding="0" cellspacing="0" class="100p" width="600" style="backgroundcolor:#F1F1F1;">
+                <tr>
+                <td colspan="2" nowrap="nowrap" class="header" style="border-collapse: separate; text-align: left; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #8C1D40; font-family: Arial, 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; font-size: 40px; font-weight:bold; line-height: 44px; letter-spacing: -1px; text-decoration: none !important;"><a xt="SPCLICK" name="ASU Header Link" title="Arizona State University" href="https://asu.edu" style="color:#FDC627; text-decoration:none;"><span style="color:#FDC627;"><font color="#FDC627">Arizona State University</font></span></a>
+</td>
+</tr>
+</table>
+</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			<!--HEADER STUFF END-->
+				<tr>
+					<td class="full-width-image">
+
+<table class="100p" width="600" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+<tr>
+<td class="100p" width="600" align="center" valign="middle">  
+
+<div data-type="slot" data-key="banner"></div>
+  
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+        
+					</td>
+				</tr>
+				<!--BANNER END-->
+<table bgcolor="#fff" width="100%">
+
+				  <tr>
+					<td class="one-column">
+						<table width="100%">
+							<tr>
+<td class="mobile-bump" style="border-collapse: collapse; text-align: left; font-size:16px; color:#8C1D40; font-family: Arial, 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; padding: 16px 0px 16px 10px; line-height: 24px; font-weight: bold;">%%First Name%%,
+</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+<tr>
+<td align="center" valign="top">
+
+
+<div data-type="slot" data-key="main1"></div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="main2"></div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="main3"></div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="main4"></div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="main5"></div>
+
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="main6"></div>
+
+</td>
+</tr>
+
+</table>
+				
+				<table bgcolor="#000" width="100%">
+				
+				<tr>
+					<td class="two-column-sns">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="100%">
+						<tr>
+						<td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+
+<tr>
+<td width="290px" align="center" style="vertical-align: middle; padding: 8px; margin-left: auto; margin-right: auto; ">
+<a name="ASU Footer Link" title="ASU Logo" href="http://www.asu.edu/" target="_blank"><img width="120px" alt="ASU Logo" src="http://image.reply.asu.edu/lib/fe8d137272610d7c76/m/1/ASU_WhiteLogo.png" name="ASU Logo" border="0" style="vertical-align: middle; margin-right: auto; text-align:center;"></a>
+</td>
+</tr>
+                    
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td><td width="50%" valign="top">
+						<![endif]-->
+						<div class="column">
+							<table width="100%">
+								<tr>
+									<td class="inner">
+										<table class="contents">
+
+<tr>
+<td width="290px" align="center" style="vertical-align: middle; padding: 8px; margin-left: auto; margin-right: auto; ">
+<a name="Facebook_FutureSunDevils" title="Facebook_FutureSunDevils" href="https://www.facebook.com/FutureSunDevils" target="_blank"><img width="47" height="47" border="0" alt="" src="http://image.reply.asu.edu/lib/fe8d137272610d7c76/m/1/Facebook.png" style="vertical-align: middle;"></a> 
+<a name="Instagram_FutureSunDevils" title="Instagram_FutureSunDevils" href="http://instagram.com/FutureSunDevils" target="_blank"><img width="47" height="47" border="0" alt="" src="http://image.reply.asu.edu/lib/fe8d137272610d7c76/m/1/Instagram.png" style="vertical-align: middle;"></a> 
+<a name="Snapchat_FutureSunDevils" title="Snapchat_FutureSunDevils" href="https://www.snapchat.com/add/futuresundevils" target="_blank"><img width="47" height="47" border="0" alt="" src="http://image.reply.asu.edu/lib/fe8d137272610d7c76/m/1/Snapchat.png" style="vertical-align: middle;"></a> 
+<a name="Twitter_futuresundevils" title="Twitter_futuresundevils" href="http://twitter.com/futuresundevils" target="_blank"><img width="47" height="47" valign="middle" border="0" alt="" src="http://image.reply.asu.edu/lib/fe8d137272610d7c76/m/1/Twitter.png" style="vertical-align: middle;"></a></td>
+</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+				  
+				</table>
+				
+<table bgcolor="#ffc627" width="100%">
+				
+<tr>
+					<td class="one-column">
+						<table width="100%">
+							<tr>
+<td class="mobile-bump" style="border-collapse: collapse; text-align: center; font-size:20px; color:#333333; font-family: Arial, 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; padding: 8px 0px 8px 0px; mso-line-height-rule:exactly; line-height: 24px; font-weight: 300;"><strong>Learn to thrive.<br><a href="https://about.asu.edu/rankings" name="ASU rankings" title="View ASU's rankings" style="text-decoration:none;"><span style="color: #8C1D40;">ASU — #1 in the U.S. for innovation.</span></a></strong>
+</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+</table>
+				
+<table class="100p" width="600" border="0" cellpadding="0" cellspacing="0" bgcolor="#F1F1F1">
+<tr>
+<td align="center" valign="top">
+
+<div data-type="slot" data-key="footer"></div>
+
+</td>
+</tr>
+</table>
+					</td>
+				</tr>
+				  
+				</table>
+
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</div>
+	</center>
+</body>
+</html>
+
+
